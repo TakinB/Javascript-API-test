@@ -1,0 +1,19 @@
+{
+    "name": "Actenum-API-testing",
+    "version": "1.0.0",
+    "description": "Quick API Testing",
+    "author": "Bahareh",
+    "dependencies": {
+        "body-parser": "^1.17.1",
+        "mocha": "^3.2.0",
+        "mocha-jenkins-reporter": "^0.3.7"
+    },
+    "scripts": {
+        "prestart": "npm install;",
+        "test": "./node_modules/.bin/mocha --reporter spec"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "supertest": "^3.0.0"
+    }
+}
