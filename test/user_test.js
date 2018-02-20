@@ -67,6 +67,16 @@ describe('User api', function () {
             .expect(405, done);
     });
 
+    it('should return 400 on POST request if property is missing', function (done) {
+        api.post('')
+            .set('Accept', 'application/x-www-form-urlencoded')
+            .send({
+                lastName: "Storms",
+                email: "actenum@example.comR",
+            })
+            .expect(400, done);
+    });
+
     it('should return 404 on PUT if ID does not exist', function (done) {
         api.put('/randomNonExistenceID')
             .set('Accept', 'application/x-www-form-urlencoded')
